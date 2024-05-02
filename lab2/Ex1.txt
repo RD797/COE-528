@@ -1,0 +1,23 @@
+//Requires: non-null arrays of a and b
+//Modifies: a
+//Effects: Replaces max element in array a with max element in array b. All other elements are unchanged. If multiple occurrences of the max element in array a exist, only first occurrence is replaced.
+
+public static void substituteMax(int[] a, int[] b) {
+int maxOfA = a[0];
+int index = 0;
+for (int i = 0; i < a.length; i++) {
+	if(a[i] > maxOfA) {
+		maxOfA = a[i];
+		index = i;
+		}
+	}
+
+int maxOfB = b[0];
+for (int i = 0; i < b.length; i++) {
+	if(b[i] > maxOfB) {
+		maxOfB = b[i];
+		}
+	}
+
+a[index] = maxOfB;
+	}
